@@ -1,6 +1,6 @@
 package model;
 
-public abstract class Tarjeta_credito {
+public class Tarjeta_credito extends Tarjeta{
     private Fecha_vencimiento vencimiento;
 
     public Fecha_vencimiento getVencimiento() {

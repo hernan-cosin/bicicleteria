@@ -1,6 +1,6 @@
 package model;
 
-public abstract class Cliente_federado {
+public class Cliente_federado extends Clientes{
     private Integer nro_matricula;
     private Agrupacion agrupacion;
     

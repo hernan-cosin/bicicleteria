@@ -1,6 +1,6 @@
 package model;
 
-public abstract class Tarjeta extends Forma_de_pago{
+public class Tarjeta extends Forma_de_pago{
     private Long nro_tarjeta;
     private String tipo_tarjeta;
     public Long getNro_tarjeta() {

@@ -2,10 +2,10 @@ package model;
 
 import java.util.List;
 
-public abstract class Compra {
+public class Compra {
     private Forma_de_pago Forma_de_pago;
     private List<Bicicleta> productos;
-    private Float total;
+    private Double total;
     private Fecha fecha;
     private Clientes cliente;
     private Integer nro_factura;
@@ -21,10 +21,10 @@ public abstract class Compra {
     public void setProductos(List<Bicicleta> productos) {
         this.productos = productos;
     }
-    public Float getTotal() {
+    public Double getTotal() {
         return total;
     }
-    public void setTotal(Float total) {
+    public void setTotal(Double total) {
         this.total = total;
     }
     public Fecha getFecha() {

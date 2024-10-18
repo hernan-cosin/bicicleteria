@@ -1,14 +1,14 @@
 package model;
 
 public class Fecha extends Fecha_vencimiento{
-    private Integer anio;
+    private Integer dia;
 
-    public Integer getAnio() {
-        return anio;
+    public Integer getDia() {
+        return dia;
     }
 
-    public void setAnio(Integer anio) {
-        this.anio = anio;
+    public void setDia(Integer dia) {
+        this.dia = dia;
     }
     
     

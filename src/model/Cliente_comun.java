@@ -1,6 +1,6 @@
 package model;
 
-public abstract class Cliente_comun extends Clientes{
+public class Cliente_comun extends Clientes{
     private Direccion direccion;
 
     public Direccion getDireccion() {

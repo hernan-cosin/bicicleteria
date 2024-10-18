@@ -1,11 +1,13 @@
 package model;
 
+import java.util.List;
+
 public abstract class Clientes {
     private String nombre;
     private String apellido;
     private Fecha fecha_nacimiento;
     private Long dni;
-    private Integer compras;
+    private List<Bicicleta> compras;
 
     public void comprar_bicicleta () {
         
@@ -35,11 +37,11 @@ public abstract class Clientes {
     public void setDni(Long dni) {
         this.dni = dni;
     }
-
-    public Integer getCompras() {
+    public List<Bicicleta> getCompras() {
         return compras;
     }
-    public void setCompras(Integer compras) {
+
+    public void setCompras(List<Bicicleta> compras) {
         this.compras = compras;
     }
 }

@@ -1,20 +1,21 @@
 package model;
 
-public abstract class Fecha_vencimiento {
-    private Integer dia;
+public class Fecha_vencimiento {
     private Integer mes;
-    public Integer getDia() {
-        return dia;
-    }
-    public void setDia(Integer dia) {
-        this.dia = dia;
-    }
+    private Integer anio;
+    
     public Integer getMes() {
         return mes;
     }
     public void setMes(Integer mes) {
         this.mes = mes;
     }
-
+    public Integer getAnio() {
+        return anio;
+    }
+    public void setAnio(Integer anio) {
+        this.anio = anio;
+    }
+    
     
 }
