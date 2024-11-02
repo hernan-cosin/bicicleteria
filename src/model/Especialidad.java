@@ -3,6 +3,11 @@ package model;
 public class Especialidad {
     private String nombre;
 
+    // Constructor
+    public Especialidad(String nombre) {
+        this.nombre = nombre;
+    }
+
     public String getNombre() {
         return nombre;
     }

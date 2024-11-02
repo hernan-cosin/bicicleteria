@@ -4,6 +4,11 @@ public class Direccion {
     private String calle;
     private Integer numero;
 
+    public Direccion(String calle, Integer numero) {
+        this.calle = calle;
+        this.numero = numero;
+    }
+
     public void modificar_direccion(Direccion dir) {
         if (this.getCalle() == dir.calle & this.getNumero() == dir.numero) {
             throw new Error("La nueva dirección coincide con la dirección actual.");

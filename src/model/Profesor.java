@@ -3,9 +3,17 @@ package model;
 public class Profesor {
     private String nombre;
     private String apellido;
-    private Long dni;
+    private int dni;
     private Fecha fecha_nacimiento;
     private Agrupacion agrupacion;
+
+    public Profesor(String nombre, String apellido, int dni, Fecha fecha_nacimiento, Agrupacion agrupacion) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.dni = dni;
+        this.fecha_nacimiento = fecha_nacimiento;
+        this.agrupacion = agrupacion;
+    }
     
     public String getNombre() {
         return nombre;
@@ -19,10 +27,10 @@ public class Profesor {
     public void setApellido(String apellido) {
         this.apellido = apellido;
     }
-    public Long getDni() {
+    public int getDni() {
         return dni;
     }
-    public void setDni(Long dni) {
+    public void setDni(int dni) {
         this.dni = dni;
     }
     public Fecha getFecha_nacimiento() {

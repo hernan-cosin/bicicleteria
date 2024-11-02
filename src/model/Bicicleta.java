@@ -8,48 +8,73 @@ public class Bicicleta {
     private Especialidad especialidad;
     private Integer stock;
     private Double valor;
-    
+
+    // Constructor
+    public Bicicleta(String marca, String modelo, Integer rodado, Tipo_bicicleta tipo_bicicleta,
+            Especialidad especialidad, Integer stock, Double valor) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.rodado = rodado;
+        this.tipo_bicicleta = tipo_bicicleta;
+        this.especialidad = especialidad;
+        this.stock = stock;
+        this.valor = valor;
+    }
+
     public String getMarca() {
         return marca;
     }
+
     public void setMarca(String marca) {
         this.marca = marca;
     }
+
     public String getModelo() {
         return modelo;
     }
+
     public void setModelo(String modelo) {
         this.modelo = modelo;
     }
+
     public Integer getRodado() {
         return rodado;
     }
+
     public void setRodado(Integer rodado) {
         this.rodado = rodado;
     }
+
     public Tipo_bicicleta getTipo_bicicleta() {
         return tipo_bicicleta;
     }
+
     public void setTipo_bicicleta(Tipo_bicicleta tipo_bicicleta) {
         this.tipo_bicicleta = tipo_bicicleta;
     }
+
     public Especialidad getEspecialidad() {
         return especialidad;
     }
+
     public void setEspecialidad(Especialidad especialidad) {
         this.especialidad = especialidad;
     }
+
     public Integer getStock() {
         return stock;
     }
+
     public void setStock(Integer stock) {
         this.stock = stock;
     }
+
     public Double getValor() {
         return valor;
     }
+
     public void setValor(Double valor) {
         this.valor = valor;
     }
-    
+
 }

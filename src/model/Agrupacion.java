@@ -1,5 +1,6 @@
 package model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Agrupacion {
@@ -7,6 +8,11 @@ public class Agrupacion {
     private List<Actividad> actividades;
     private List<Profesor> profesores;
 
+    public Agrupacion(String nombre) {
+        this.nombre = nombre;
+        this.actividades = new ArrayList<Actividad>();
+        this.profesores = new ArrayList<Profesor>();
+    }
 
     public String getNombre() {
         return nombre;
