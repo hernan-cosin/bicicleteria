@@ -3,7 +3,7 @@ package model;
 import java.util.List;
 
 public class Compra {
-    private Forma_de_pago Forma_de_pago;
+    private Forma_de_pago forma_de_pago;
     private List<Bicicleta> productos;
     private Double total;
     private Fecha fecha;
@@ -11,22 +11,22 @@ public class Compra {
     private Integer nro_factura;
 
     // Constructor
-    public Compra(Forma_de_pago formaDePago, List<Bicicleta> productos, Double total,
+    public Compra(Forma_de_pago formaDePago, List<Bicicleta> productos,
             Fecha fecha, Clientes cliente, Integer nroFactura) {
-        this.Forma_de_pago = formaDePago;
+        this.forma_de_pago = formaDePago;
         this.productos = productos;
-        this.total = total;
+        this.total = 0.0;
         this.fecha = fecha;
         this.cliente = cliente;
         this.nro_factura = nroFactura;
     }
 
     public Forma_de_pago getForma_de_pago() {
-        return Forma_de_pago;
+        return forma_de_pago;
     }
 
-    public void setForma_de_pago(Forma_de_pago forma_de_pago) {
-        Forma_de_pago = forma_de_pago;
+    public void setForma_de_pago(Forma_de_pago formaDePago) {
+        forma_de_pago = formaDePago;
     }
 
     public List<Bicicleta> getProductos() {

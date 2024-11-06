@@ -16,7 +16,6 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 public class compraTest2 {
-        // public static void main(String[] args) {
         @Test
         public void comprar_bicicleta() {
                 Fecha fechaNacimiento = new Fecha(07, 1993, 07);
@@ -39,20 +38,25 @@ public class compraTest2 {
                 listaDeBicicletas.add(bicicletaNro1);
                 listaDeBicicletas.add(bicicletaNro2);
 
-                Forma_de_pago formaDePagoClienteNro1 = new Tarjeta_debito(325000.00, 4500640036923774L, "visa");
+                Forma_de_pago formaDePagoClienteNro1 = new Tarjeta_debito(4500640036923774L, "visa");
 
-                Compra compraClienteNro1 = new Compra(formaDePagoClienteNro1, listaDeBicicletas, 325000.00,
-                                fechaNacimiento,
+                Compra compraClienteNro1 = new Compra(formaDePagoClienteNro1, listaDeBicicletas, fechaNacimiento,
                                 clienteNro1, 001);
-
+                System.out.println(formaDePagoClienteNro1);
                 clienteNro1.comprar_bicicleta(compraClienteNro1);
 
                 Compra compraClienteNro2 = new Compra(formaDePagoClienteNro1,
-                                listaDeBicicletas, 325000.00, fechaNacimiento,
+                                listaDeBicicletas, fechaNacimiento,
                                 clienteNro1, 002);
 
                 clienteNro1.comprar_bicicleta(compraClienteNro2);
+
                 Integer expected = 18;
+                Double valorBiciExpected = 325000.00;
+                Double valorTarjetaExpected = 325000.00;
+
                 assertEquals(expected, bicicletaNro1.getStock());
+                assertEquals(valorBiciExpected, compraClienteNro1.getTotal());
+                assertEquals(valorTarjetaExpected, formaDePagoClienteNro1.getMonto());
         }
 }

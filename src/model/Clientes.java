@@ -20,16 +20,25 @@ public abstract class Clientes {
     }
 
     public void comprar_bicicleta(Compra compra) {
-        if (compra != null) {
-            compras.add (compra);
+        if (compra != null) { // verifico que compra no sea nulo
+            compras.add(compra);
+
+            Double suma = 0.0; // inicializo variable para sumar el total
 
             for (Bicicleta bici : compra.getProductos()) {
                 if (bici.getStock() > 0) {
-                        bici.setStock(bici.getStock() - 1); // reduce el stock
-                    } else {
-                        System.out.println("Bicicleta " + bici.getModelo() + " is out of stock.");
-                    }
+                    bici.setStock(bici.getStock() - 1); // reduce el stock
+                    Double valorBici = bici.getValor(); // obtengo el valor de cada bici
+                    suma += valorBici; // sumo los valores de las bicicletas
+                } else {
+                    System.out.println("Bicicleta " + bici.getModelo() + " is out of stock.");
+                }
             }
+
+            compra.setTotal(suma); // seteo en la compra el valor total sumado
+            // seteo el valor total sumado a la forma de pago
+            Forma_de_pago forma = compra.getForma_de_pago();
+            forma.setMonto(suma);
         }
     }
 

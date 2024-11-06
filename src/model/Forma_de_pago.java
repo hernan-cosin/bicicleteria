@@ -3,8 +3,8 @@ package model;
 public class Forma_de_pago {
     private Double monto;
 
-    public Forma_de_pago(Double monto) {
-        this.monto = monto;
+    public Forma_de_pago() {
+        this.monto = 0.0;
     }
 
     public Double getMonto() {

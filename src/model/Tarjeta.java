@@ -4,8 +4,8 @@ public class Tarjeta extends Forma_de_pago{
     private long nro_tarjeta;
     private String tipo_tarjeta;
 
-    public Tarjeta(Double monto, long nro_tarjeta, String tipo_tarjeta){
-        super(monto);
+    public Tarjeta(long nro_tarjeta, String tipo_tarjeta){
+        super();
         this.nro_tarjeta = nro_tarjeta;
         this.tipo_tarjeta = tipo_tarjeta;
     }
